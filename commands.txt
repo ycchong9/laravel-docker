@@ -1,0 +1,5 @@
+docker build -t my-laravel-image .
+
+docker run -p 8000:8000 my-laravel-image
+
+https://morioh.com/p/edd47d59de1b
