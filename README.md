@@ -25,7 +25,7 @@ $ docker build -t my-laravel-image .
 
 ## 4. Run container
 ```
-$ docker run -p 8000:8000 my-laravel-image
+$ docker run -p 8000:8000 --name laravel-container my-laravel-image
 ```
 
 ## 5. Stop container
