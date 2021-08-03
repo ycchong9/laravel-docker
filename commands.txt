@@ -30,6 +30,9 @@ docker pull ycchong39/laravel-docker:dev0.1
 
 ===============
 
-docker run -p 8000:8000 --name laraveldocker -v $PWD/.env:/blog/.env my-laravel-image
+docker run -p 8000:8000 --name laravel-container -v $PWD/.env:/blog/.env my-laravel-image
 docker exec laraveldocker php artisan key:generate
 docker exec laraveldocker php artisan config:cache
+
+
+docker run -p 8000:8000 --name laravel-test-container -v $PWD/.env:/blog/.env laravel-test
