@@ -28,3 +28,9 @@ $ docker build -t my-laravel-image .
 $ docker run -p 8000:8000 my-laravel-image
 ```
 
+## 5. Stop container
+```
+$ docker stop <container_name>
+
+$ docker rm <container_name>
+```
