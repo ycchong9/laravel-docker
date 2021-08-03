@@ -3,3 +3,33 @@ docker build -t my-laravel-image .
 docker run -p 8000:8000 my-laravel-image
 
 https://morioh.com/p/edd47d59de1b
+
+
+docker stop <container_name>
+
+docker rm <container_name>
+
+docker tag <image_name> <repo_name>:<tag_name>
+
+docker build -t ycchong39/laravel-docker .
+docker build -t ycchong39/laravel-docker:dev0.1 .
+
+docker tag ycchong39/laravel-docker ycchong39/laravel-docker:dev0.1
+
+
+docker run -p 8000:8000 ycchong39/laravel-docker:dev0.1
+docker run -d -p 8000:8000 my-laravel-image
+docker run -p 8000:8000 --name laraveldocker my-laravel-image
+
+
+docker push .....
+
+
+docker pull ycchong39/laravel-docker:dev0.1
+
+
+===============
+
+docker run -p 8000:8000 --name laraveldocker -v $PWD/.env:/blog/.env my-laravel-image
+docker exec laraveldocker php artisan key:generate
+docker exec laraveldocker php artisan config:cache
